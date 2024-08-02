@@ -2,7 +2,7 @@
 
 import { PiGreaterThanBold } from "react-icons/pi";
 import { PiLessThanBold } from "react-icons/pi";
-import { BiDotsVerticalRounded } from "react-icons/bi";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 
 function Searchbar() {
@@ -25,7 +25,7 @@ function Searchbar() {
           />
         </div>
         <div className="mt-2">
-          <BiDotsVerticalRounded size={25} color="white" />
+          <HiOutlineDotsHorizontal size={25} color="white" />
         </div>
       </div>
     </>

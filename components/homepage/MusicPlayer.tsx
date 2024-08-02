@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaStepBackward, FaStepForward, FaPlay, FaVolumeDown, FaVolumeUp } from 'react-icons/fa';
+import { IoMicOutline, IoShareSocialOutline  } from "react-icons/io5";
 
 function MusicPlayer() {
   return (
@@ -32,7 +33,7 @@ function MusicPlayer() {
           </div>
           <div className="w-full flex items-center space-x-2">
             <span className="text-xs text-gray-400">0:00</span>
-            <input type="range" className="w-full" />
+            <input type="range" className="w-[600px]" />
             <span className="text-xs text-gray-400">3:30</span>
           </div>
         </div>
@@ -43,9 +44,11 @@ function MusicPlayer() {
             <FaVolumeDown />
           </button>
           <input type="range" className="w-24" />
-          <button className="text-xl hover:text-gray-400">
+          <div className="flex text-xl gap-3">
             <FaVolumeUp />
-          </button>
+            <IoMicOutline/>
+            <IoShareSocialOutline/>
+          </div>
         </div>
       </div>
     </div>
