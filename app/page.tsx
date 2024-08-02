@@ -1,4 +1,5 @@
 import HomePage from "@/components/homepage/HomePage";
+import MusicPlayer from "@/components/homepage/MusicPlayer";
 import Sidebar1 from "@/components/sidebar/Sidebar1";
 import Sidebar2 from "@/components/sidebar/Sidebar2";
 
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <div className="w-[20%] hidden sm:block fixed right-0">
         <Sidebar2 />
       </div>
+      <MusicPlayer/>
     </div>
   );
 };

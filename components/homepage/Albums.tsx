@@ -7,7 +7,7 @@ import { PlayButton } from "../ui/PlayButton";
 function Albums() {
   return (
     <>
-      <div className="text-white md:mx-[290px] md:px-12 px-6 mt-8">
+      <div className="text-white md:mx-[290px] md:px-12 px-6 mt-8 pb-28">
         <div className="">
           <h1 className="font-semibold text-3xl px-3">Hello, Kirtan</h1>
           <div className="flex">
