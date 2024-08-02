@@ -64,7 +64,7 @@ function Sidebar1() {
       <div className="bg-primary text-white h-screen p-5">
         <div className="flex justify-between">
           <Image src={`/logo.svg`} alt="logo" width={35} height={35} />
-          <span className="mt-2">
+          <span className="mt-1">
             <LuLibrary size={25} />
           </span>
         </div>
