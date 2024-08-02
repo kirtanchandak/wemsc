@@ -1,15 +1,23 @@
 "use client";
 
-import { PiGreaterThanBold } from "react-icons/pi";
-import { PiLessThanBold } from "react-icons/pi";
+import { PiGreaterThanBold, PiLessThanBold } from "react-icons/pi";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineHeart,
+  AiOutlineFolder,
+} from "react-icons/ai";
 
 function Searchbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      {/* Search bar for larger screens */}
-      <div className="hidden md:flex justify-center md:p-8 space-x-16">
+      <div className="hidden lg:flex justify-center md:p-8 space-x-16">
         <div className="flex gap-6 mt-3">
           <PiLessThanBold size={20} color="white" />
           <PiGreaterThanBold size={20} color="white" />
@@ -30,7 +38,6 @@ function Searchbar() {
         </div>
       </div>
 
-      {/* Hide the search bar on small screens */}
       <div className="hidden md:hidden justify-between p-4">
         <PiLessThanBold size={20} color="white" />
         <div className="relative flex-grow mx-2">
@@ -49,69 +56,20 @@ function Searchbar() {
 
       {/* small screens */}
 
-      <div>
-        <div className=" w-full mb-4 flex items-center justify-between ">
-          <div className="hidden md:flex gap-x-2 items-center">
-            <button className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                className="text-white"
-                height="35"
-                width="35"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8.81809 4.18179C8.99383 4.35753 8.99383 4.64245 8.81809 4.81819L6.13629 7.49999L8.81809 10.1818C8.99383 10.3575 8.99383 10.6424 8.81809 10.8182C8.64236 10.9939 8.35743 10.9939 8.1817 10.8182L5.1817 7.81819C5.09731 7.73379 5.0499 7.61933 5.0499 7.49999C5.0499 7.38064 5.09731 7.26618 5.1817 7.18179L8.1817 4.18179C8.35743 4.00605 8.64236 4.00605 8.81809 4.18179Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-            <button className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition">
-              <svg
-                stroke="currentColor"
-                fill="none"
-                stroke-width="0"
-                viewBox="0 0 15 15"
-                className="text-white"
-                height="35"
-                width="35"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.18194 4.18185C6.35767 4.00611 6.6426 4.00611 6.81833 4.18185L9.81833 7.18185C9.90272 7.26624 9.95013 7.3807 9.95013 7.50005C9.95013 7.6194 9.90272 7.73386 9.81833 7.81825L6.81833 10.8182C6.6426 10.994 6.35767 10.994 6.18194 10.8182C6.0062 10.6425 6.0062 10.3576 6.18194 10.1819L8.86374 7.50005L6.18194 4.81825C6.0062 4.64251 6.0062 4.35759 6.18194 4.18185Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div className="flex md:hidden gap-x-2 items-center p-5">
-            <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 20 20"
-                aria-hidden="true"
-                className="text-black"
-                height="20"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-              </svg>
+      <div className="p-5 lg:hidden">
+        <div className="w-full mb-4 flex items-center justify-between">
+          <div className="flex lg:hidden gap-x-2 items-center">
+            <button
+              className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition"
+              onClick={() => setOpen(!open)}
+            >
+              <GiHamburgerMenu />
             </button>
             <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 24 24"
                 className="text-black"
                 height="20"
@@ -142,6 +100,43 @@ function Searchbar() {
           </div>
         </div>
       </div>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed z-10 top-0 left-0 h-full w-64 bg-primary text-white transition-transform transform ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between p-4">
+          <h2 className="text-xl font-semibold">Menu</h2>
+          <button onClick={() => setOpen(false)}>
+            <AiOutlineClose size={24} />
+          </button>
+        </div>
+        <ul className="p-4">
+          <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
+            <AiOutlineHome size={20} />
+            Home
+          </li>
+          <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
+          <CiSearch size={20} /> Search 
+          </li>
+          <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
+          <AiOutlineFolder size={20} /> Your Library 
+          </li>
+          <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
+            <AiOutlineHeart size={20}/> Liked Songs
+          </li>
+        </ul>
+      </div>
+
+      {/* Overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black opacity-50"
+          onClick={() => setOpen(false)}
+        ></div>
+      )}
     </>
   );
 }

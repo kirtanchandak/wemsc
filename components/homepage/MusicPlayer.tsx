@@ -9,7 +9,7 @@ function MusicPlayer() {
   return (
     <>
       {/* Music player for large screens */}
-      <div className="fixed bottom-0 left-0 w-full bg-primary text-white p-4 border-t-[0.01px] border-gray-700 hidden md:flex">
+      <div className="fixed bottom-0 left-0 w-full bg-primary text-white p-4 border-t-[0.01px] border-gray-700 hidden lg:flex">
         <div className="flex items-center justify-between w-full">
           {/* Song Info */}
           <div className="flex items-center space-x-4">
@@ -56,7 +56,7 @@ function MusicPlayer() {
       </div>
 
       {/* Music player for small screens */}
-      <div className="fixed bottom-0 left-0 w-full bg-primary text-white p-4 border-t-[0.01px] border-gray-700 flex md:hidden">
+      <div className="fixed bottom-0 left-0 w-full bg-primary text-white p-4 border-t-[0.01px] border-gray-700 flex lg:hidden">
         <div className="flex items-center justify-between w-full">
           {/* Simplified Player Controls and Progress Bar */}
           <div className="flex items-center space-x-4">
