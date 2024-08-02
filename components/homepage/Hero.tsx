@@ -7,9 +7,9 @@ import { Carousel } from "react-responsive-carousel";
 function Hero() {
   return (
     <>
-      <div className="hidden md:block mx-[290px] h-screen">
+      <div className="hidden md:block mx-[290px]">
         <div className="flex justify-center">
-          <Carousel autoPlay={true} showStatus={false} stopOnHover={true}>
+          <Carousel showThumbs={false} autoPlay={true} showStatus={false} stopOnHover={true}>
             <Image
               alt="banner"
               src={`/travis-banner.jpg`}

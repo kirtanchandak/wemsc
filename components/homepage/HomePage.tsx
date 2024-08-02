@@ -1,8 +1,8 @@
 "use client";
 
+import Albums from "./Albums";
 import Hero from "./Hero";
 import Searchbar from "./Searchbar";
-import { useEffect, useState } from "react";
 
 function HomePage() {
   return (
@@ -10,6 +10,7 @@ function HomePage() {
       <div className="bg-secodary flex flex-col justify-center">
           <Searchbar />
           <Hero />
+          <Albums/>
       </div>
     </>
   );

@@ -2,7 +2,7 @@
 
 function Sidebar2() {
   return (
-    <div className="h-screen bg-red-300">SideBar2</div>
+    <div className="h-screen bg-primary">SideBar2</div>
   )
 }
 
