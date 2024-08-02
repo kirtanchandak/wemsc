@@ -7,22 +7,22 @@ import { Carousel } from "react-responsive-carousel";
 function Hero() {
   return (
     <>
-      <div className="hidden md:block mx-[290px]">
+      <div className="hidden md:block">
         <div className="flex justify-center">
           <Carousel className="cursor-pointer" showThumbs={false} autoPlay={true} showStatus={false} stopOnHover={true}>
             <Image
               alt="banner"
               src={`/travis-banner.jpg`}
               height={20}
-              width={1000}
-              className="rounded-md max-h-[400px]"
+              width={300}
+              className="rounded-md"
             />
             <Image
               alt="banner"
               src={`/travis-banner.jpg`}
               height={20}
-              width={1000}
-              className="rounded-md max-h-[400px]"
+              width={300}
+              className="rounded-md"
             />
           </Carousel>
         </div>
