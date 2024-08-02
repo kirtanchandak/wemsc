@@ -8,8 +8,8 @@ import { CiSearch } from "react-icons/ci";
 function Searchbar() {
   return (
     <>
-      <div className="flex justify-center md:p-8 md:space-x-16 space-x-8">
-        <div className="flex gap-6 mt-3 md:hidden">
+      <div className="flex justify-center md:p-8 space-x-16">
+        <div className="flex gap-6 mt-3">
           <PiLessThanBold size={20} color="white" />
           <PiGreaterThanBold size={20} color="white" />
         </div>
@@ -24,7 +24,7 @@ function Searchbar() {
             size={20}
           />
         </div>
-        <div className="md:hidden md:mt-3 mt-2">
+        <div className="mt-2">
           <BiDotsVerticalRounded size={25} color="white" />
         </div>
       </div>

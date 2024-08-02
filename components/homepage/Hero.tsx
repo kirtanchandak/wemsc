@@ -9,7 +9,7 @@ function Hero() {
     <>
       <div className="hidden md:block mx-[290px]">
         <div className="flex justify-center">
-          <Carousel showThumbs={false} autoPlay={true} showStatus={false} stopOnHover={true}>
+          <Carousel className="cursor-pointer" showThumbs={false} autoPlay={true} showStatus={false} stopOnHover={true}>
             <Image
               alt="banner"
               src={`/travis-banner.jpg`}
