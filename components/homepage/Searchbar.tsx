@@ -8,8 +8,8 @@ import { CiSearch } from "react-icons/ci";
 function Searchbar() {
   return (
     <>
-      <div className="flex p-8 justify-between">
-        <div className="flex gap-6 mt-3">
+      <div className="flex justify-center md:p-8 md:space-x-16 space-x-8">
+        <div className="flex gap-6 mt-3 md:hidden">
           <PiLessThanBold size={20} color="white" />
           <PiGreaterThanBold size={20} color="white" />
         </div>
@@ -17,14 +17,14 @@ function Searchbar() {
           <input
             type="text"
             placeholder="Search for artists, songs or albums"
-            className="w-[650px] p-2 pl-10 bg-white rounded-full outline-none"
+            className="md:w-[650px] w-52 p-2 pl-10 bg-white rounded-full outline-none"
           />
           <CiSearch
             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
             size={20}
           />
         </div>
-        <div className="mt-3">
+        <div className="md:hidden md:mt-3 mt-2">
           <BiDotsVerticalRounded size={25} color="white" />
         </div>
       </div>
