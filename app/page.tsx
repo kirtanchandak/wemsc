@@ -1,5 +1,5 @@
-import HomePage from "@/components/homepage/HomePage";
-import MusicPlayer from "@/components/homepage/MusicPlayer";
+import HomePage from "@/components/main/HomePage";
+import MusicPlayer from "@/components/main/components/MusicPlayer";
 import Sidebar1 from "@/components/sidebar/Sidebar1";
 import Sidebar2 from "@/components/sidebar/Sidebar2";
 

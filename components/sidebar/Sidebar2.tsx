@@ -1,6 +1,6 @@
 "use client";
 
-import { recentelyListened } from "@/data/data";
+import { recentelyListened } from "@/data/albums";
 import Image from "next/image";
 import { IoNotificationsOutline } from "react-icons/io5";
 

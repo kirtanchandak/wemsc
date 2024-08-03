@@ -1,59 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import {
-  AiOutlineHome,
-  AiFillHome,
-  AiOutlineCompass,
-  AiFillCompass,
-  AiOutlineHeart,
-  AiFillHeart,
-  AiOutlineFolder,
-  AiFillFolder,
-  AiOutlineFile,
-  AiFillFile,
-} from "react-icons/ai";
 import { LuLibrary } from "react-icons/lu";
+import SidebarItem from "../ui/SidebarItem";
+import { libraryItems, menuItems } from "@/data/sideebarEle";
 
 function Sidebar1() {
   const [activeItem, setActiveItem] = useState("Home");
-
-  const menuItems = [
-    {
-      name: "Home",
-      icon: <AiOutlineHome size={25} />,
-      activeIcon: <AiFillHome size={25} />,
-    },
-    {
-      name: "Discover",
-      icon: <AiOutlineCompass size={25} />,
-      activeIcon: <AiFillCompass size={25} />,
-    },
-    {
-      name: "Collections",
-      icon: <AiOutlineFolder size={25} />,
-      activeIcon: <AiFillFolder size={25} />,
-    },
-  ];
-
-  const libraryItems = [
-    {
-      name: "Downloads",
-      icon: <AiOutlineFile size={25} />,
-      activeIcon: <AiFillFile size={25} />,
-    },
-    {
-      name: "Favourites",
-      icon: <AiOutlineHeart size={25} />,
-      activeIcon: <AiFillHeart size={25} />,
-    },
-    {
-      name: "Local Files",
-      icon: <AiOutlineFile size={25} />,
-      activeIcon: <AiFillFile size={25} />,
-    },
-  ];
 
   const handleItemClick = (name: string) => {
     setActiveItem(name);
@@ -71,35 +24,11 @@ function Sidebar1() {
         <div className="mt-10">
           <p className="text-gray-300 text-sm font-poppins">FEATURES</p>
           <div className="mt-4">
-            {menuItems.map((item, index) => (
-              <Link
-                href="#"
-                key={index}
-                onClick={() => handleItemClick(item.name)}
-                className={`flex gap-5 mt-3 ${
-                  activeItem === item.name ? "text-blue-500" : ""
-                }`}
-              >
-                {activeItem === item.name ? item.activeIcon : item.icon}
-                <p className="font-semibold text-lg">{item.name}</p>
-              </Link>
-            ))}
+            <SidebarItem menuItems={menuItems} handleItemClick={handleItemClick} activeItem={activeItem} />
           </div>
           <p className="text-gray-300 text-sm font-poppins mt-10">LIBRARY</p>
           <div className="mt-8">
-            {libraryItems.map((item, index) => (
-              <Link
-                href="#"
-                key={index}
-                onClick={() => handleItemClick(item.name)}
-                className={`flex gap-5 mt-3 ${
-                  activeItem === item.name ? "text-blue-500" : ""
-                }`}
-              >
-                {activeItem === item.name ? item.activeIcon : item.icon}
-                <p className="font-semibold text-lg">{item.name}</p>
-              </Link>
-            ))}
+            <SidebarItem menuItems={libraryItems} handleItemClick={handleItemClick} activeItem={activeItem} />
           </div>
         </div>
       </div>

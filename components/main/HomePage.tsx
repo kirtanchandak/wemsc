@@ -1,8 +1,8 @@
 "use client";
 
-import Albums from "./Albums";
-import Hero from "./Hero";
-import Searchbar from "./Searchbar";
+import Albums from "./components/Albums";
+import Hero from "./components/Hero";
+import Searchbar from "./components/Searchbar";
 
 function HomePage() {
   return (
