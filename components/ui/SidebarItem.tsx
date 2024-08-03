@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 
 interface MenuItem {
@@ -21,12 +20,24 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ handleItemClick, activeItem, 
           href="#"
           key={index}
           onClick={() => handleItemClick(item.name)}
-          className={`flex gap-5 mt-3 ${
-            activeItem === item.name ? "text-blue-500" : ""
+          className={`flex gap-5 mt-3 items-center transition-colors duration-300 ${
+            activeItem === item.name
+              ? "text-blue-500 animate-pop"
+              : "hover:animate-pop"
           }`}
         >
-          {activeItem === item.name ? <item.activeIcon size={25} /> : <item.icon size={25} />}
-          <p className="font-semibold text-lg">{item.name}</p>
+          {activeItem === item.name ? (
+            <item.activeIcon size={25}  />
+          ) : (
+            <item.icon size={25}  />
+          )}
+          <p
+            className={`font-semibold text-lg transition-opacity duration-300 ${
+              activeItem === item.name ? "animate-pop" : "opacity-50"
+            }`}
+          >
+            {item.name}
+          </p>
         </Link>
       ))}
     </div>
