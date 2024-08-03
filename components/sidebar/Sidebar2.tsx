@@ -4,8 +4,17 @@ import { recentlyPlayed, myPlayist } from "@/data/albums";
 import Image from "next/image";
 import { IoNotificationsOutline } from "react-icons/io5";
 import RecentlyPlayedItem from "../ui/RecentlyPlayedItem";
+import { useState, useEffect } from "react";
 
 function Sidebar2() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 50);
+  }, []);
+
   return (
     <>
       <div className="h-screen bg-primary text-white p-5">
@@ -28,7 +37,10 @@ function Sidebar2() {
             <p className="text-gray-300">See all</p>
           </div>
           <div className="mt-5">
-            <RecentlyPlayedItem recentlyPlayed={recentlyPlayed} />
+            <RecentlyPlayedItem
+              recentlyPlayed={recentlyPlayed}
+              isLoading={isLoading}
+            />
           </div>
         </div>
         <div className="mt-8">
@@ -37,7 +49,10 @@ function Sidebar2() {
             <p className="text-gray-300">See all</p>
           </div>
           <div className="mt-5">
-            <RecentlyPlayedItem recentlyPlayed={myPlayist} />
+            <RecentlyPlayedItem
+              recentlyPlayed={myPlayist}
+              isLoading={isLoading}
+            />
           </div>
         </div>
         <div>
