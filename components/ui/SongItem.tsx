@@ -30,12 +30,12 @@ function SongItem({ albums }: SongItemProps) {
                 height={250}
                 width={250}
               />
+              <div className="absolute bottom-24 right-5">
+                  <PlayButton />
+                </div>
               <div className="mt-2">
                 <p className="font-bold text-xl">{album.name}</p>
                 <p className="text-gray-300">By - {album.artist}</p>
-                <div className="absolute bottom-24 right-5">
-                  <PlayButton />
-                </div>
               </div>
             </div>
           ))}

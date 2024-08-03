@@ -26,7 +26,7 @@ export const albums = [
     },
 ]
 
-export const recentelyListened = [
+export const recentlyPlayed = [
     {
         id: 1,
         name: "One Love",
@@ -45,4 +45,19 @@ export const recentelyListened = [
         artist: "Taylor Swift",
         img: drake3
     }
+]
+
+export const myPlayist = [
+    {
+        id: 1,
+        name: "One Love",
+        artist: "Drake",
+        img: drake1
+    },
+    {
+        id: 2,
+        name: "Bystandars",
+        artist: "Drake",
+        img: drake2
+    },
 ]
