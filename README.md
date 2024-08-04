@@ -1,4 +1,4 @@
-# wemsc
+# wemsc 🎸
 
 Wemsc is a music app to explore your inner self with music 🎧
 
