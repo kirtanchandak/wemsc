@@ -1,20 +1,9 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { PlayButton } from "../ui/PlayButton";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css';
-
-interface Album {
-  id: number;
-  name: string;
-  img: string | StaticImageData;
-  artist: string;
-}
-
-interface SongItemProps {
-  albums: Album[];
-  isLoading: boolean; 
-}
+import { SongItemProps } from "@/types/types";
 
 function SongItem({ albums, isLoading }: SongItemProps) {
   if (isLoading) {

@@ -1,21 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css';
+import { RecentlyPlayedItemProps } from "@/types/types";
 
-interface RecentlyPlayedItem {
-  id: number;
-  name: string;
-  img: string | StaticImageData;
-  artist: string;
-}
-
-interface RecentlyPlayedItemProps {
-  recentlyPlayed: RecentlyPlayedItem[];
-  isLoading: boolean; 
-}
 
 function RecentlyPlayedItem({ recentlyPlayed, isLoading }: RecentlyPlayedItemProps) {
   if (isLoading) {
