@@ -5,17 +5,19 @@ import Sidebar2 from "@/components/sidebar/Sidebar2";
 
 const Home: React.FC = () => {
   return (
-    <div className="flex justify-between container">
-      <div className="w-[20%] hidden lg:block fixed">
+    <div className="relative min-h-screen">
+      <div className="hidden lg:block lg:fixed lg:left-0 lg:top-0 lg:w-1/5 lg:h-full">
         <Sidebar1 />
       </div>
-      <div className="flex-grow w-[60%]">
+      <div className="w-full lg:w-3/5 lg:ml-auto lg:mr-auto lg:relative">
         <HomePage />
       </div>
-      <div className="w-[20%] hidden lg:block fixed right-0">
+      <div className="hidden lg:block lg:fixed lg:right-0 lg:top-0 lg:w-1/5 lg:h-full">
         <Sidebar2 />
       </div>
-      <MusicPlayer/>
+      <div className="w-full fixed bottom-0">
+        <MusicPlayer />
+      </div>
     </div>
   );
 };

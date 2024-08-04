@@ -13,7 +13,7 @@ function Searchbar() {
 
   return (
     <>
-      <div className="hidden lg:flex justify-center md:p-8 space-x-16">
+      <div className="hidden lg:flex justify-between md:p-8 md:px-12 px-6">
         <div className="flex gap-6 mt-3">
           <PiLessThanBold size={20} color="white" className="cursor-pointer" />
           <PiGreaterThanBold
@@ -26,7 +26,7 @@ function Searchbar() {
           <input
             type="text"
             placeholder="Search for artists, songs or albums"
-            className="md:w-[650px] w-52 p-2 pl-10 bg-white rounded-full outline-none"
+            className="lg:w-[550px] md:w-[500px] w-52 p-2 pl-10 bg-white rounded-full outline-none"
           />
           <CiSearch
             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
