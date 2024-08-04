@@ -1,6 +1,6 @@
 "use client";
 
-import { albums } from "@/data/albums";
+import { albums, newReleases } from "@/data/albums";
 import { useState, useEffect } from "react";
 import SongItem from "../../ui/SongItem";
 
@@ -26,7 +26,7 @@ function Albums() {
           <h1 className="font-semibold text-3xl px-3">
             New releases just for you
           </h1>
-          <SongItem albums={albums} isLoading={isLoading}/>
+          <SongItem albums={newReleases} isLoading={isLoading}/>
         </div>
         <div className="mt-12">
           <iframe
