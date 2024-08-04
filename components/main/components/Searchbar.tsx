@@ -6,11 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import {
-  AiOutlineHome,
-  AiOutlineHeart,
-  AiOutlineFolder,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineHeart, AiOutlineFolder } from "react-icons/ai";
 
 function Searchbar() {
   const [open, setOpen] = useState(false);
@@ -19,8 +15,12 @@ function Searchbar() {
     <>
       <div className="hidden lg:flex justify-center md:p-8 space-x-16">
         <div className="flex gap-6 mt-3">
-          <PiLessThanBold size={20} color="white" />
-          <PiGreaterThanBold size={20} color="white" />
+          <PiLessThanBold size={20} color="white" className="cursor-pointer" />
+          <PiGreaterThanBold
+            size={20}
+            color="white"
+            className="cursor-pointer"
+          />
         </div>
         <div className="relative">
           <input
@@ -34,7 +34,7 @@ function Searchbar() {
           />
         </div>
         <div className="mt-2">
-          <HiOutlineDotsHorizontal size={25} color="white" />
+          <HiOutlineDotsHorizontal size={25} color="white" className="cursor-pointer" />
         </div>
       </div>
 
@@ -119,13 +119,13 @@ function Searchbar() {
             Home
           </li>
           <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
-          <CiSearch size={20} /> Search 
+            <CiSearch size={20} /> Search
           </li>
           <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
-          <AiOutlineFolder size={20} /> Your Library 
+            <AiOutlineFolder size={20} /> Your Library
           </li>
           <li className="py-2 px-4 hover:bg-gray-700 rounded-md flex gap-3">
-            <AiOutlineHeart size={20}/> Liked Songs
+            <AiOutlineHeart size={20} /> Liked Songs
           </li>
         </ul>
       </div>

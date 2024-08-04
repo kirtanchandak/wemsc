@@ -4,6 +4,7 @@ import { useState } from "react";
 import { LuLibrary } from "react-icons/lu";
 import SidebarItem from "../ui/SidebarItem";
 import { libraryItems, menuItems } from "@/data/sideebarEle";
+import Link from "next/link";
 
 function Sidebar1() {
   const [activeItem, setActiveItem] = useState("Home");
@@ -16,8 +17,10 @@ function Sidebar1() {
     <>
       <div className="bg-primary text-white h-screen p-5">
         <div className="flex justify-between">
+          <Link href="#">
           <Image src={`/logo.svg`} alt="logo" width={35} height={35} />
-          <span className="mt-1">
+          </Link>
+          <span className="mt-1 cursor-pointer">
             <LuLibrary size={25} />
           </span>
         </div>
