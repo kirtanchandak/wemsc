@@ -17,13 +17,13 @@ function Albums() {
     <>
       <div className="text-white md:px-12 px-6 mt-8 pb-28">
         <div className="">
-          <h1 className="font-semibold text-3xl px-3">Hello, Kirtan</h1>
+          <h1 className="font-semibold text-3xl px-3 md:text-left text-center">Hello, Kirtan</h1>
           <div>
             <SongItem albums={albums} isLoading={isLoading}/>
           </div>
         </div>
         <div className="mt-12">
-          <h1 className="font-semibold text-3xl px-3">
+          <h1 className="font-semibold text-3xl px-3 md:text-left text-center">
             New releases just for you
           </h1>
           <SongItem albums={newReleases} isLoading={isLoading}/>

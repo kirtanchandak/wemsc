@@ -8,7 +8,7 @@ import { SongItemProps } from "@/types/types";
 function SongItem({ albums, isLoading }: SongItemProps) {
   if (isLoading) {
     return (
-      <div className="flex">
+      <div className="flex justify-center">
         <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12 mt-3">
           {Array(3) 
             .fill(null)
@@ -33,7 +33,7 @@ function SongItem({ albums, isLoading }: SongItemProps) {
   }
 
   return (
-    <div className="flex">
+    <div className="flex justify-center">
       <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12 mt-3">
         {albums.map((album, index) => (
           <div
